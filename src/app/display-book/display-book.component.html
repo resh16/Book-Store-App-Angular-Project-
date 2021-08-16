@@ -1,0 +1,86 @@
+<div class="container-fluid">
+
+    <!-- <table class="table">
+        
+        <tbody>
+          ...
+        </tbody>
+      </table> -->
+
+
+
+
+
+    <table class = "table">
+        <thead class="table-dark">
+            <tr>
+                <td>ISBN Number</td>
+                <td>BOOK TITLE</td>
+                <td>AUTHOR</td>
+                <td>PRICE</td>
+                <td>DESCRIPTION</td>
+
+                
+            </tr>
+            <tbody>
+                <tr>
+                    <div class="btn-group me-2" role="group" aria-label="Second group">
+                       <td><button (click) = "toggleCollapse() "type="button" class="btn btn-secondary">{{books.isbn}}</button></td> 
+                    </div>
+
+
+                    <td> {{books.title}} </td>
+                    <td> {{books.author}} </td>
+                    <td> {{books.price}} </td>
+                    <td> {{books.description}} </td>
+                  </tr>
+        
+            </tbody>
+        <!-- </thead> -->
+        
+        
+            
+            
+        
+        
+    </table>
+</div>
+
+
+
+<div class="container-fluid" *ngIf = "!isCollapsed">
+    <h6> ISBN No : {{books.isbn}} </h6>
+    <h6> Book Title : {{books.title}} </h6>
+    <h6> Book Author : {{books.author}} </h6>
+    <h6> Book Price : {{books.price}} 
+        <div class="btn-group me-2" role="group" aria-label="Second group">
+        <button (click)="priceUpdate()" type="button" class="btn btn-secondary">Update Price</button> 
+        <br>
+
+        <!-- <div *ngIf="updateP ==true" class="input-group mb-3">
+            <input type="text" placeholder="Update Price" #updatePrice class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>  -->
+
+        <div *ngIf="updateP ==true" class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Update Price" aria-label="Update Price" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2">UPDATE</button>
+          </div>
+
+     </div> 
+
+     
+
+    <br>
+        <!-- <button> Update Price </button ></h6> -->
+    Description : {{books.description}} 
+        <div class="btn-group me-2" role="group" aria-label="Second group">
+            <button (click)="DescriptionUpdate()" type="button" class="btn btn-secondary">Update Description</button> 
+         <br>
+           <div *ngIf="updateD ==true" class="input-group mb-3">
+                <input type="text" #updateDesc class="form-control" placeholder="Update Description" aria-label="Update Description" aria-describedby="button-addon2">
+                <button (click)="updateValueD(updateDesc.value)" class="btn btn-outline-secondary" type="submit" id="button-addon2">UPDATE</button>
+              </div>
+            <!-- </div> </p>   -->
+<!-- </div> -->
+
+

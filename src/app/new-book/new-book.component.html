@@ -1,0 +1,46 @@
+<div class="container-fluid" style="margin-left :100px; margin-top: 20px;">
+    <div class="row">
+        <div class="form-group">
+            <div class="input-group mb-3">
+                
+                <label>ISBN :</label>
+                <input type="text" placeholder="Enter Isbn Number" #isbn class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div> 
+            
+            <div class="input-group mb-3">
+                
+                <label>Book Title : </label>
+                <input type="text" placeholder="Enter Book Title" #bookTitle class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div> 
+
+            <div class="input-group mb-3">
+                
+                <label> Author : </label>
+                <input type="text" placeholder="Enter Author Name" #author class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div> 
+
+            <div class="input-group mb-3">
+                
+                <label> Price : </label>
+                <input type="text" placeholder="Enter Price of the book" #price class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div> 
+
+
+           
+
+            <div class="input-group mb-3">
+                
+                <label> Description : </label>
+                <input type="text" placeholder="Description" #desc class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+            </div> 
+            <div class="col-12">
+                <button type="submit" (click) = "onAddBook(isbn.value,bookTitle.value,author.value,price.value,desc.value)"  class="btn btn-primary">ADD TO THE LIST</button>
+              </div>
+
+
+              
+
+        </div>
+        
+    </div>
+</div>
